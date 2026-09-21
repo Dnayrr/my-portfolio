@@ -36,6 +36,10 @@
             color: inherit;
         }
 
+        ul {
+            list-style: none;
+        }
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -109,6 +113,11 @@
             color: #555;
             cursor: not-allowed;
             margin-top: 10px;
+        }
+        .maintenance-btn:hover {
+            background-color: #ccc;
+            transform: none;
+            box-shadow: none;
         }
 
         /* ==== Navbar ==== */
@@ -254,12 +263,8 @@
         }
 
         .hero-image img {
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-        }
-        .hero-image img {
             width: 300px;
-            height: 300px; 
+            height: 300px;
             object-fit: cover;
             border-radius: 50%;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
@@ -413,6 +418,27 @@
             transform: scale(1.05);
         }
 
+        /* Pengganti screenshot supaya tidak ada data perusahaan yang tampil */
+        .project-image-placeholder {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            font-size: 4rem;
+            color: white;
+        }
+
+        .project-badge {
+            display: inline-block;
+            background: rgba(124, 58, 237, 0.15);
+            color: #a78bfa;
+            padding: 3px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
         .project-content {
             padding: 25px;
         }
@@ -480,6 +506,10 @@
             align-items: flex-start;
             gap: 15px;
             margin-bottom: 20px;
+        }
+
+        .info-item p {
+            margin-bottom: 0;
         }
 
         .info-icon {
@@ -563,6 +593,10 @@
             font-weight: 700;
             margin-bottom: 1.5rem;
             color: var(--primary);
+        }
+
+        .footer-logo span {
+            color: var(--text-light);
         }
 
         .footer-links {
@@ -740,7 +774,7 @@
                 <div class="hero-text">
                     <h1 class="hero-title">Hi, I'm <span class="hero-highlight">Rian Sukma Dermawan</span></h1>
                     <p class="hero-subtitle">A passionate <span class="hero-highlight">Mobile Developer</span> specializing in Flutter. Seeking opportunities to build innovative apps.</p>
-                    <a href="#contact" class="btn">Hire Me for Internship</a>
+                    <a href="#contact" class="btn">Let's Work Together</a>
                     <a href="CV-RianSukma-JuniorFullstackDev.pdf" class="btn" download style="margin-top: 10px;">Download CV</a>
                 </div>
                 <div class="hero-image">
@@ -758,9 +792,9 @@
             <div class="about-content">
                 <div class="about-text">
                     <h3>I am an informatics graduate</h3>
-                    <p>I'm a <span class="hero-highlight">Full-Stack Developer</span> experienced in building web and mobile applications — from designing REST APIs and managing databases (MySQL, PostgreSQL) to building interfaces with <span class="hero-highlight">React</span> and backends with <span class="hero-highlight">Python/Flask</span>.</p>
-                    <p>My main focus is <span class="hero-highlight">mobile app development with Flutter</span>, with basic working knowledge of native development (Kotlin, Swift). I've worked on projects ranging from decision support systems and ML-integrated apps to maintaining a POS (Point of Sale) transaction system, and I enjoy picking up new tools quickly. Currently looking for opportunities to grow as a full-stack or mobile developer.</p>
-                    
+                    <p>I'm a <span class="hero-highlight">Full-Stack Developer</span> experienced in building web and mobile applications — from designing REST APIs and managing databases (MySQL, PostgreSQL) to building interfaces with <span class="hero-highlight">React</span> and backends with <span class="hero-highlight">Django</span> and <span class="hero-highlight">Flask</span>.</p>
+                    <p>My main focus is <span class="hero-highlight">mobile app development with Flutter</span>, with basic working knowledge of native development (Kotlin, Swift). During my internship, I independently built a <span class="hero-highlight">POS (Point of Sale) system</span> for a startup, covering the database, Django REST API, and Flutter mobile app. I've also worked on decision support systems and ML-integrated apps, and I enjoy picking up new tools quickly. Currently looking for opportunities to grow as a full-stack or mobile developer.</p>
+
                     <div class="skills">
                         <div class="skill-item">
                             <div class="skill-name">
@@ -790,7 +824,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="skill-tags">
                         <span class="skill-tag">Agile</span>
                         <span class="skill-tag">Django</span>
@@ -803,7 +837,6 @@
                         <span class="skill-tag">Python</span>
                         <span class="skill-tag">React</span>
                         <span class="skill-tag">REST API</span>
-                        
                     </div>
                 </div>
             </div>
@@ -816,6 +849,26 @@
             <h2 class="section-title">My Projects</h2>
             <p class="section-subtitle">Some of my mobile and web development work</p>
             <div class="projects-container">
+
+                <!-- POS System (Internship Project) -->
+                <div class="project-card">
+                    <div class="project-image project-image-placeholder">
+                        <i class="fas fa-cash-register"></i>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-badge">Internship Project · Solo Developer</span>
+                        <h3>Point of Sale (POS) System</h3>
+                        <p>A Point of Sale system for a startup, built solo end-to-end: database design, a REST API with Django, and a mobile app with Flutter. Covers product and stock management, transaction recording, and sales reports. The beta version is running and the final version is currently in development.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Flutter</span>
+                            <span class="tech-tag">Django</span>
+                            <span class="tech-tag">REST API</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                        </div>
+                        <span class="btn github-btn maintenance-btn">Private Project (Company)</span>
+                    </div>
+                </div>
+
                 <div class="project-card">
                     <div class="project-image">
                         <img src="https://i.imgur.com/JBw6ec2.png" alt="Dutaku Sleman">
@@ -826,10 +879,9 @@
                         <div class="project-tech">
                             <span class="tech-tag">React</span>
                             <span class="tech-tag">Python</span>
-                            <span class="tech-tag">FalskAPI</span>
-                            <!-- <button class="btn maintenance-btn" disabled>Under Maintenance</button> -->
-                            <a href="https://github.com/Dnayrr/dutaku_sleman" target="_blank" class="btn github-btn">View on GitHub</a>
+                            <span class="tech-tag">FlaskAPI</span>
                         </div>
+                        <a href="https://github.com/Dnayrr/dutaku_sleman" target="_blank" class="btn github-btn">View on GitHub</a>
                     </div>
                 </div>
                 <div class="project-card">
@@ -843,8 +895,8 @@
                             <span class="tech-tag">Flutter</span>
                             <span class="tech-tag">speech_to_text</span>
                             <span class="tech-tag">Isar</span>
-                            <a href="https://github.com/Dnayrr/catatan_harianku" target="_blank" class="btn github-btn">View on GitHub</a>
                         </div>
+                        <a href="https://github.com/Dnayrr/catatan_harianku" target="_blank" class="btn github-btn">View on GitHub</a>
                     </div>
                 </div>
                 <div class="project-card">
@@ -858,8 +910,8 @@
                             <span class="tech-tag">Flutter</span>
                             <span class="tech-tag">MySQL</span>
                             <span class="tech-tag">FlaskAPI</span>
-                            <a href="https://github.com/Dnayrr/PlantoGuard" target="_blank" class="btn github-btn">View on GitHub</a>
                         </div>
+                        <a href="https://github.com/Dnayrr/PlantoGuard" target="_blank" class="btn github-btn">View on GitHub</a>
                     </div>
                 </div>
             </div>
@@ -867,61 +919,62 @@
     </section>
 
     <!-- Contact Section -->
-<section id="contact" class="section contact">
-    <div class="container">
-        <h2 class="section-title">Contact Me</h2>
-        <p class="section-subtitle">Interested in my skills? Let's connect!</p>
-        <div class="contact-container">
-            <div class="contact-info">
-                <h3>Get In Touch</h3>
-                <p>I'm actively looking for mobile development and fullstack development opportunities. If you have a project or just want to connect, please feel free to send me an email directly!</p>
-                <div class="info-item">
-                    <div class="info-icon">
-                        <i>📍</i>
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2 class="section-title">Contact Me</h2>
+            <p class="section-subtitle">Interested in my skills? Let's connect!</p>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <p>I'm actively looking for mobile development and fullstack development opportunities. If you have a project or just want to connect, please feel free to send me an email directly!</p>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i>📍</i>
+                        </div>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Gamping, Yogyakarta</p>
+                        </div>
                     </div>
-                    <div>
-                        <h4>Location</h4>
-                        <p>Gamping, Yogyakarta</p>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i>✉️</i>
+                        </div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>riansukma583@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i>📞</i>
+                        </div>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+62 852-7253-5539</p>
+                        </div>
                     </div>
                 </div>
-                <div class="info-item">
-                    <div class="info-icon">
-                        <i>✉️</i>
+
+                <form action="https://formspree.io/f/xnnveaeq" method="POST" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" class="form-control" required>
                     </div>
-                    <div>
-                        <h4>Email</h4>
-                        <p>riansukma583@gmail.com</p>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="_replyto" class="form-control" required>
                     </div>
-                </div>
-                <div class="info-item">
-                    <div class="info-icon">
-                        <i>📞</i>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" class="form-control" required></textarea>
                     </div>
-                    <div>
-                        <h4>Phone</h4>
-                        <p>+62 852-7253-5539</p>
-                    </div>
-                </div>
+
+                    <button type="submit" class="btn submit-btn">Send Message</button>
+                </form>
             </div>
-    
-        <form action="https://formspree.io/f/xnnveaeq" method="POST" class="contact-form">
-            <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" class="form-control" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="_replyto" class="form-control" required>
-            </div>
-            <div class="form-group">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" class="form-control" required></textarea>
-            </div>
-            
-            <button type="submit" class="btn submit-btn">Send Message</button>
-        </form>
-    </div>
-</section>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer">
@@ -979,11 +1032,11 @@
         // Scroll Animation
         const animateOnScroll = () => {
             const elements = document.querySelectorAll('.about-image, .about-text, .project-card, .contact-info, .contact-form');
-            
+
             elements.forEach(element => {
                 const elementPosition = element.getBoundingClientRect().top;
                 const screenPosition = window.innerHeight / 1.2;
-                
+
                 if (elementPosition < screenPosition) {
                     element.classList.add('in-view');
                 }
@@ -1007,7 +1060,7 @@
             const data = new FormData(event.target);
             status.innerHTML = 'Sending...';
             status.style.color = 'var(--text-gray)';
-            
+
             fetch(event.target.action, {
                 method: form.method,
                 body: data,
@@ -1025,8 +1078,8 @@
                             status.innerHTML = data["errors"].map(error => error["message"]).join(", ");
                         } else {
                             status.innerHTML = "Oops! There was a problem submitting your form";
-                            status.style.color = '#f87171'; // Warna merah untuk error
                         }
+                        status.style.color = '#f87171'; // Warna merah untuk error
                     })
                 }
             }).catch(error => {
@@ -1044,10 +1097,10 @@
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
-                
+
                 const targetId = this.getAttribute('href');
                 const targetElement = document.querySelector(targetId);
-                
+
                 if (targetElement) {
                     window.scrollTo({
                         top: targetElement.offsetTop - 80,
